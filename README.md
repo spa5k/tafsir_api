@@ -3,8 +3,10 @@
 <p align="center">
   <img  src="https://raw.githubusercontent.com/spa5k/tafsir_api/main/asset/tafsirapi.png">
 </p>
-[![](https://data.jsdelivr.com/main/package/gh/spa5k/tafsir_api/badge)](https://www.jsdelivr.com/package/gh/spa5k/tafsir_api)
-[![](https://data.jsdelivr.com/main/package/gh/spa5k/tafsir_api/badge/rank)](https://www.jsdelivr.com/package/gh/spa5k/tafsir_api)
+
+[![](https://data.jsdelivr.com/v1/package/gh/spa5k/tafsir_api/badge)](https://www.jsdelivr.com/package/gh/spa5k/tafsir_api)
+[![](https://data.jsdelivr.com/v1/package/gh/spa5k/tafsir_api/badge/rank)](https://www.jsdelivr.com/package/gh/spa5k/tafsir_api)
+
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/spa5k/tafsir_api/main/asset/bismilllah.jpg">
