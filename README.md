@@ -1,14 +1,14 @@
 <h1 align="center"> Tafsir API</h1>
 
 <p align="center">
-  <img width="460" height="300" src="https://github.com/spa5k/tafsir_api/raw/1/asset/tafsirapi.jpg">
+  <img  src="https://raw.githubusercontent.com/spa5k/tafsir_api/v1/asset/tafsirapi.png">
 </p>
 
 [![](https://data.jsdelivr.com/v1/package/gh/spa5k/tafsir_api/badge)](https://www.jsdelivr.com/package/gh/spa5k/tafsir_api)
 [![](https://data.jsdelivr.com/v1/package/gh/spa5k/tafsir_api/badge/rank)](https://www.jsdelivr.com/package/gh/spa5k/tafsir_api)
 
 <p align="center">
-  <img width="460" height="300" src="https://github.com/spa5k/tafsir_api/raw/1/asset/bismilllah.jpg">
+  <img src="https://raw.githubusercontent.com/spa5k/tafsir_api/v1/asset/bismilllah.jpg">
 </p>
 
 **In the name of Allah, the Entirely Merciful, the Especially Merciful, who has guided me to do this work**
