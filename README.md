@@ -61,6 +61,38 @@ Welcome to the Tafsir API repository, a comprehensive collection of Quran Tafsir
 
   > Example URL: [https://cdn.jsdelivr.net/gh/spa5k/tafsir_api@main/tafsir/en-al-qushairi-tafsir/2/empty_ayahs.json](https://cdn.jsdelivr.net/gh/spa5k/tafsir_api@main/tafsir/en-al-qushairi-tafsir/2/empty_ayahs.json)
 
+## Editions:
+| Author Name                            | ID  | Language Name | Name                                    | Slug                                | Source                    |
+| -------------------------------------- | --- | ------------- | --------------------------------------- | ----------------------------------- | ------------------------- |
+| AbdulRahman Bin Hasan Al-Alshaikh      | 381 | bengali       | Tafsir Fathul Majid                     | bn-tafisr-fathul-majid              | https://quran.com/        |
+| Hafiz Ibn Kathir                       | 169 | english       | Tafsir Ibn Kathir (abridged)            | en-tafisr-ibn-kathir                | https://quran.com/        |
+| Hafiz Ibn Kathir                       | 14  | arabic        | Tafsir Ibn Kathir                       | ar-tafsir-ibn-kathir                | https://quran.com/        |
+| Tawheed Publication                    | 164 | bengali       | Tafseer ibn Kathir                      | bn-tafseer-ibn-e-kaseer             | https://quran.com/        |
+| Bayaan Foundation                      | 165 | bengali       | Tafsir Ahsanul Bayaan                   | bn-tafsir-ahsanul-bayaan            | https://quran.com/        |
+| King Fahd Quran Printing Complex       | 166 | bengali       | Tafsir Abu Bakr Zakaria                 | bn-tafsir-abu-bakr-zakaria          | https://quran.com/        |
+| Mufti Muhammad Shafi                   | 168 | english       | Maarif-ul-Quran                         | en-tafsir-maarif-ul-quran           | https://quran.com/        |
+| Saddi                                  | 170 | russian       | Tafseer Al Saddi                        | ru-tafseer-al-saddi                 | https://quran.com/        |
+| Saddi                                  | 91  | arabic        | Tafseer Al Saddi                        | ar-tafseer-al-saddi                 | https://quran.com/        |
+| Baghawy                                | 94  | arabic        | Tafseer Al-Baghawi                      | ar-tafsir-al-baghawi                | https://quran.com/        |
+| Tanweer                                | 92  | arabic        | Tafseer Tanwir al-Miqbas                | ar-tafseer-tanwir-al-miqbas         | https://quran.com/        |
+| Waseet                                 | 93  | arabic        | Tafsir Al Wasit                         | ar-tafsir-al-wasit                  | https://quran.com/        |
+| Tabari                                 | 15  | arabic        | Tafsir al-Tabari                        | ar-tafsir-al-tabari                 | https://quran.com/        |
+| المیسر                                 | 16  | arabic        | Tafsir Muyassar                         | ar-tafsir-muyassar                  | https://quran.com/        |
+| Qurtubi                                | 90  | arabic        | Tafseer Al Qurtubi                      | ar-tafseer-al-qurtubi               | https://quran.com/        |
+| Rebar Kurdish Tafsir                   | 804 | Kurdish       | Rebar Kurdish Tafsir                    | kurd-tafsir-rebar                   | https://quran.com/        |
+| Sayyid Ibrahim Qutb                    | 157 | urdu          | Fi Zilal al-Quran                       | ur-tafsir-fe-zalul-quran-syed-qatab | https://quran.com/        |
+| Hafiz Ibn Kathir                       | 160 | urdu          | Tafsir Ibn Kathir                       | ur-tafseer-ibn-e-kaseer             | https://quran.com/        |
+| Dr. Israr Ahmad                        | 159 | urdu          | Tafsir Bayan ul Quran                   | ur-tafsir-bayan-ul-quran            | https://quran.com/        |
+| Maulana Wahid Uddin Khan               | 818 | urdu          | Tazkirul Quran(Maulana Wahiduddin Khan) | ur-tazkirul-quran                   | https://quran.com/        |
+| Maulana Wahid Uddin Khan               | 817 | english       | Tazkirul Quran(Maulana Wahiduddin Khan) | en-tazkirul-quran                   | https://quran.com/        |
+| Kashf Al-Asrar Tafsir                  | 109 | english       | Kashf Al-Asrar Tafsir                   | en-kashf-al-asrar-tafsir            | https://www.altafsir.com/ |
+| Al Qushairi Tafsir                     | 108 | english       | Al Qushairi Tafsir                      | en-al-qushairi-tafsir               | https://www.altafsir.com/ |
+| Kashani Tafsir                         | 107 | english       | Kashani Tafsir                          | en-kashani-tafsir                   | https://www.altafsir.com/ |
+| Tafsir al-Tustari                      | 93  | english       | Tafsir al-Tustari                       | en-tafsir-al-tustari                | https://www.altafsir.com/ |
+| Asbab Al-Nuzul by Al-Wahidi            | 86  | english       | Asbab Al-Nuzul by Al-Wahidi             | en-asbab-al-nuzul-by-al-wahidi      | https://www.altafsir.com/ |
+| Tanwîr al-Miqbâs min Tafsîr Ibn ‘Abbâs | 73  | english       | Tanwîr al-Miqbâs min Tafsîr Ibn ‘Abbâs  | en-tafsir-ibn-abbas                 | https://www.altafsir.com/ |
+| Al-Jalalayn                            | 74  | english       | Al-Jalalayn                             | en-al-jalalayn                      | https://www.altafsir.com/ |
+
 
 ## Share:
 
