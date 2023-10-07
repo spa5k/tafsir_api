@@ -27,7 +27,6 @@ Welcome to the Tafsir API repository, a comprehensive collection of Quran Tafsir
 - `https://cdn.jsdelivr.net/gh/spa5k/tafsir_api@{apiVersion}/{endpoint}`
 
 > Versioning - By default, it uses main branch, which you can use as `@main` or `@v1` etc. You can also use commit hash as versioning.
-> Sometimes, v1 don't work in jsDelivr, so you can use `@main` instead of `@v1` in jsDelivr. Prefer Main branch over v1.
 
 ### Base URLs -
 
