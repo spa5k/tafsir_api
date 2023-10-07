@@ -10,9 +10,9 @@ import (
 )
 
 const (
-	baseDir         = "tafsir"
-	emptyAyahsFile  = "empty_ayahs.json"
-	filePermission  = 0644
+	baseDir        = "tafsir"
+	emptyAyahsFile = "empty_ayahs.json"
+	filePermission = 0644
 )
 
 func main() {
