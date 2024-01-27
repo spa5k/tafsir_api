@@ -102,3 +102,8 @@ We welcome contributions to enhance the API with more Tafsirs and additional fea
 You can check [https://github.com/spa5k/tafsir_api/blob/main/internal/strategies/quran_strategy.go](https://github.com/spa5k/tafsir_api/blob/main/internal/strategies/quran_strategy.go) for more info on how to add more Tafsirs.
 
 Thank you for being a part of our mission to spread the message of God to the world.
+
+
+### Other Similar Projects:
+- [Hadith API](https://github.com/fawazahmed0/hadith-api#readme)
+- [Tafsir API](https://github.com/spa5k/tafsir_api#readme)
