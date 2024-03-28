@@ -1,1 +1,51 @@
-{ "ayahs": null }
+{
+  "ayahs": [
+    {
+      "ayah": 1,
+      "surah": 77,
+      "text": "By those sent forth in succession;By this is meant the angels who are sent with the good (maʿrūf) of His command (amr).He said:In its inner meaning it refers to the spirits (arwāḥ) of the believers which are sent inspiration (ilhām) in accordance with the Book and the Sunna."
+    },
+    {
+      "ayah": 15,
+      "surah": 77,
+      "text": "Woe to the deniers of that Day!He said:Woe on that day to those who make claims that have no truth [in them], for their claims will deny them publicly before [many] witnesses. This will occur at the time of exposure (iftiḍāḥ).His words, Exalted is He:"
+    },
+    {
+      "ayah": 3,
+      "surah": 77,
+      "text": "by the sweeping spreaders;by which He causes virtuous deeds (aʿmāl ṣāliḥa) to appear."
+    },
+    {
+      "ayah": 35,
+      "surah": 77,
+      "text": "On that Day they will be speechless.He said:Nobody will speak for himself by [presenting an] argument (bi-ḥujja), unless it be by the exhibitingof helplessness (ʿajz) and servanthood (ʿubūdiyya), and by refraining from infringements [of the Law] (mukhālafāt) and crimes (jarāʾim).His words, Exalted is He:"
+    },
+    {
+      "ayah": 4,
+      "surah": 77,
+      "text": "by the decisive discriminators;[which discriminate] between truth (ḥaqq) and falsehood (bāṭil), and between the Sunna and innovation (bidʿa)."
+    },
+    {
+      "ayah": 46,
+      "surah": 77,
+      "text": "�Eat and enjoy � for a short while, evildoers that you are�.He said:Whoever�s only concern is with [satisfying] his stomach and private parts, has [already] manifestedhis ruin (khasāra), for He says [to such people], Exalted is He: �Eat and enjoy � for a short while, evildoers that you are�.But God, Glorified and Exalted is He, knows best. His words, Exalted is He:"
+    },
+    {
+      "ayah": 5,
+      "surah": 77,
+      "text": "By those that deliver the reminder, This is the revelation (waḥy) through inspiration (ilhām) which the spiritual self (nafs al-rūḥ), the intellect (ʿaql) and the heart (qalb) cast upon the natural self (nafs al-ṭabʿ), and this is the hidden form of reminder (dhikr khafiyy)."
+    },
+    {
+      "ayah": 6,
+      "surah": 77,
+      "text": "as an excuse or as a warning.God has excused the suppression of that by which the Book and the Sunna is opposed; or as a warning to His creatures of His punishment. Furthermore, God, Exalted is He, swore by them to the reality of the Resurrection. His words, Exalted is He:"
+    }
+  ],
+  "empty_ayahs": [
+    { "ayah": 7, "surah": 77 },
+    { "ayah": 14, "surah": 77 },
+    { "ayah": 22, "surah": 77 },
+    { "ayah": 30, "surah": 77 },
+    { "ayah": 38, "surah": 77 }
+  ]
+}

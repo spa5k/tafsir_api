@@ -25,5 +25,12 @@
       "surah": 40,
       "text": "He is the Living, there is no god but He. Who is the painter of the forms of the Adamites, the shower of powers in earth and heaven, the con- veyer of daily provisions to the servants? He is the Living: That living, lasting one who has always been, is, and will be. His being has no first, His existence no last, He subsists after the world and the world's folk. The creatures' work goes back to Him forever."
     }
+  ],
+  "empty_ayahs": [
+    { "ayah": 6, "surah": 40 },
+    { "ayah": 26, "surah": 40 },
+    { "ayah": 46, "surah": 40 },
+    { "ayah": 68, "surah": 40 },
+    { "ayah": 85, "surah": 40 }
   ]
 }

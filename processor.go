@@ -12,7 +12,7 @@ import (
 const (
 	baseDir        = "tafsir"
 	emptyAyahsFile = "empty_ayahs.json"
-	filePermission = 0644
+	filePermission = 0o644
 )
 
 func main() {
@@ -126,6 +126,7 @@ func saveCombinedJSON(tafsirDir string, surahDir string, ayahs []map[string]inte
 
 	fmt.Printf("Combined JSON data saved to %s for Surah %s\n", outputFile, filepath.Base(surahDir))
 }
+
 func getSubdirectories(dir string) ([]string, error) {
 	var subdirs []string
 	entries, err := ioutil.ReadDir(dir)

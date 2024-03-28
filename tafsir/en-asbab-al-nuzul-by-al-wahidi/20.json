@@ -1,6 +1,11 @@
 {
   "ayahs": [
     {
+      "ayah": 1,
+      "surah": 20,
+      "text": "(Ta. Ha. We have not revealed unto thee (Muhammad) this Qur'an that thou shouldst be distressed) [20:1-2]. Muqatil said: �Abu Jahl and al-Nadr ibn al-Harith said to the Prophet, Allah bless him and give him peace: 'You have become distressed because of leaving our religion'. They said this because they saw him immersed in worship for long times and striving hard. And so Allah, exalted is He, revealed this verse�. Abu Bakr al-Harithi informed us\u003e Abu'l-Shaykh al-Hafiz\u003e Abu Yahya\u003e al-'Askari\u003e Abu Malik\u003e Juwaybir\u003e al-Dahhak who said: �When the Qur'an was revealed to the Prophet, Allah bless him and give him peace, he and his Companions stood up to pray. The unbelievers of Quraysh said: 'This Qur'an was only revealed to Muhammad to make him distressed'. And so Allah, exalted is He, revealed (Ta. Ha), He says: O man (We have not revealed unto thee (Muhammad) this Qur'an that thou shouldst be distressed)�."
+    },
+    {
       "ayah": 10,
       "surah": 20,
       "text": "Hast thou received the story of Moses when he saw a fire? Fire is a mark of munificence and a proof of generosity. The Arabs would light up a fire to bring guests. But no one has ever found a banquet through a fire like Moses, and no one has seen a host from a fire like God. Moses was seeking a fire to light up a tent. He found a fire that burns spirit and heart. All fires burn the body, but the fire of friendship burns the spirit. No one can be patient with a spirit-burning fire. Fires are of different sorts: the fire of shame, the fire of yearning, the fire of love. The fire of shame burns away dispersion, the fire of yearning burns away patience, and the fire of love burns away the two worlds such that nothing remains but the Real. The evidence of having found friend- ship is that the two worlds are burned away. The mark of the realizer is that he does not attend to anything other than the Real. The mark of nonbeing is to reach oneself. When rain reaches the ocean, it has reached it. He who reaches the Patron reaches himself."
@@ -54,6 +59,11 @@
       "ayah": 17,
       "surah": 20,
       "text": "What is that in thy right hand, O Moses? When Moses heard the address, “Surely I am thy Lord,” the ruling power of awe began to attack and he fell into bewilderment and confoundedness. Because of the force of that awe, ease did not remain in its place. His body was not able to bear it with patience, and his heart was not able to busy itself with intellect. The Lord of the Worlds attended to his heart with the call of gentleness; He began speaking about his staff. He said, “What is that in thy right hand, O Moses?” He said, “It is my staff” [20:18]. The command came, “Throw it down, O Moses! [20:19]. Throw down this staff concerning which you say that it is your staff.” Moses threw it down and it became a snake. When he saw that the snake aimed to come after him, he was frightened and fled. The call came, “Take it, and fear not! [20:21]. O Moses, pick up the snake and do not fear. This is that very staff of which you spoke, claiming it was your staff. O Moses, what do you have to do with making claims? The men of the road make no claims and ascribe nothing to themselves.” It was the attribute of Moses' own being and the traces of his claim that turned toward him in that Presence, for the claims of mortal nature were still staining his innate disposition. The stain appeared with the claim my staff, so it was said to him, “O Moses, there is still something of ego- ism in you.” It was a mercy from the Real to Moses that He said, “What is that in thy right hand, O Moses?,” for the claim appeared from his makeup, and when he was made aware of it, he left the claim behind and shook the dust from the cloak of his sinlessness."
+    },
+    {
+      "ayah": 2,
+      "surah": 20,
+      "text": "(Ta. Ha. We have not revealed unto thee (Muhammad) this Qur'an that thou shouldst be distressed) [20:1-2]. Muqatil said: �Abu Jahl and al-Nadr ibn al-Harith said to the Prophet, Allah bless him and give him peace: 'You have become distressed because of leaving our religion'. They said this because they saw him immersed in worship for long times and striving hard. And so Allah, exalted is He, revealed this verse�. Abu Bakr al-Harithi informed us\u003e Abu'l-Shaykh al-Hafiz\u003e Abu Yahya\u003e al-'Askari\u003e Abu Malik\u003e Juwaybir\u003e al-Dahhak who said: �When the Qur'an was revealed to the Prophet, Allah bless him and give him peace, he and his Companions stood up to pray. The unbelievers of Quraysh said: 'This Qur'an was only revealed to Muhammad to make him distressed'. And so Allah, exalted is He, revealed (Ta. Ha), He says: O man (We have not revealed unto thee (Muhammad) this Qur'an that thou shouldst be distressed)�."
     },
     {
       "ayah": 22,
@@ -130,5 +140,13 @@
       "surah": 20,
       "text": "Hast thou received the story of Moses when he saw a fire? Fire is a mark of munificence and a proof of generosity. The Arabs would light up a fire to bring guests. But no one has ever found a banquet through a fire like Moses, and no one has seen a host from a fire like God. Moses was seeking a fire to light up a tent. He found a fire that burns spirit and heart. All fires burn the body, but the fire of friendship burns the spirit. No one can be patient with a spirit-burning fire. Fires are of different sorts: the fire of shame, the fire of yearning, the fire of love. The fire of shame burns away dispersion, the fire of yearning burns away patience, and the fire of love burns away the two worlds such that nothing remains but the Real. The evidence of having found friend- ship is that the two worlds are burned away. The mark of the realizer is that he does not attend to anything other than the Real. The mark of nonbeing is to reach oneself. When rain reaches the ocean, it has reached it. He who reaches the Patron reaches himself."
     }
+  ],
+  "empty_ayahs": [
+    { "ayah": 19, "surah": 20 },
+    { "ayah": 44, "surah": 20 },
+    { "ayah": 62, "surah": 20 },
+    { "ayah": 88, "surah": 20 },
+    { "ayah": 109, "surah": 20 },
+    { "ayah": 135, "surah": 20 }
   ]
 }

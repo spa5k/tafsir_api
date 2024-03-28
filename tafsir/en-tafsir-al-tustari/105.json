@@ -1,1 +1,15 @@
-{ "ayahs": null }
+{
+  "ayahs": [
+    {
+      "ayah": 1,
+      "surah": 105,
+      "text": "Have you not considered the way in which your Lord dealt with the Men of the Elephant? He said:�Do you not know how your Lord dealt with your enemies while you had not yet appeared in this world? Thus will He treat your enemies while you are amongst them, and will avert their scheming (makr) from you.�His words, Exalted is He:"
+    },
+    {
+      "ayah": 3,
+      "surah": 105,
+      "text": "(And did He not unleash upon them) flights of birds?ʿIkrima said regarding these words of God, Exalted is He, �They are birds that came from the direction of the sea, and had heads like the heads of vipers.� It was said also, �They had heads like those of predatory beasts.� Their likeness had never been seen before that day nor has it been seen since. They proceeded to pelt them [the Men of the Elephant] with stones to infect their skin with smallpox. This was the first day on which a person infected with smallpox was seen. But God, Exalted is He, knows best what is correct.His words, Exalted is He:"
+    }
+  ],
+  "empty_ayahs": [{ "ayah": 2, "surah": 105 }, { "ayah": 5, "surah": 105 }]
+}

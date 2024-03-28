@@ -7,13 +7,14 @@ import (
 	"os"
 	"path/filepath"
 	"sync"
+
 	"tafsir_go/internal/strategies"
 	"tafsir_go/internal/tafsir"
 	internal "tafsir_go/internal/types"
 )
 
 const (
-	//EditionsJSONFile = "data/test_edition.json"
+	// EditionsJSONFile = "data/test_edition.json"
 	EditionsJSONFile = "data/editions.json"
 	AyahDataJSONFile = "data/ayah_data.json"
 	TafsirDir        = "tafsir"

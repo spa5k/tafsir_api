@@ -2,10 +2,11 @@ package strategies
 
 import (
 	"fmt"
-	"github.com/PuerkitoBio/goquery"
 	"io"
 	"net/http"
 	"strings"
+
+	"github.com/PuerkitoBio/goquery"
 )
 
 // AltafsirStrategy downloads and formats data from altafsir.com.
@@ -34,7 +35,9 @@ func downloadAndGetText(url string) string {
 
 	// Check if the response status code is not OK (200)
 	if response.StatusCode != http.StatusOK {
-		panic(fmt.Errorf("HTTP request failed with status code: %d", response.StatusCode))
+		// just log the error and return empty
+		fmt.Println("Error while downloading", url, "-", response.StatusCode)
+		return ""
 	}
 
 	// Parse the HTML content using goquery

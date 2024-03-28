@@ -82,19 +82,15 @@
     }
   ],
   "empty_ayahs": [
-    { "ayah": 2, "surah": 26 },
-    { "ayah": 29, "surah": 26 },
-    { "ayah": 50, "surah": 26 },
-    { "ayah": 73, "surah": 26 },
-    { "ayah": 97, "surah": 26 },
-    { "ayah": 120, "surah": 26 },
+    { "ayah": 25, "surah": 26 },
+    { "ayah": 55, "surah": 26 },
+    { "ayah": 75, "surah": 26 },
+    { "ayah": 96, "surah": 26 },
+    { "ayah": 121, "surah": 26 },
     { "ayah": 142, "surah": 26 },
-    { "ayah": 170, "surah": 26 },
-    { "ayah": 181, "surah": 26 },
-    { "ayah": 185, "surah": 26 },
-    { "ayah": 189, "surah": 26 },
-    { "ayah": 199, "surah": 26 },
-    { "ayah": 206, "surah": 26 },
-    { "ayah": 223, "surah": 26 }
+    { "ayah": 161, "surah": 26 },
+    { "ayah": 182, "surah": 26 },
+    { "ayah": 205, "surah": 26 },
+    { "ayah": 224, "surah": 26 }
   ]
 }

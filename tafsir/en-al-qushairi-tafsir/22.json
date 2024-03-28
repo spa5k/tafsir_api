@@ -62,9 +62,9 @@
     }
   ],
   "empty_ayahs": [
-    { "ayah": 2, "surah": 22 },
-    { "ayah": 28, "surah": 22 },
-    { "ayah": 49, "surah": 22 },
+    { "ayah": 7, "surah": 22 },
+    { "ayah": 33, "surah": 22 },
+    { "ayah": 56, "surah": 22 },
     { "ayah": 76, "surah": 22 }
   ]
 }

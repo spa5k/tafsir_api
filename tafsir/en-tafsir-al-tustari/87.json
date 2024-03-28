@@ -1,1 +1,25 @@
-{ "ayahs": null }
+{
+  "ayahs": [
+    {
+      "ayah": 1,
+      "surah": 87,
+      "text": "Glorify the name of your Lord Most High,He said:It [means] to proclaim His transcendence (tanzīh) above having rivals (aḍdād) and equals (andād). This is its outward meaning. In its inner meaning, it is to witness Him (mushāhadatuhu) through remembrance (dhikr) during the ritual prayer without witnessing anything else.His words, Exalted is He:"
+    },
+    {
+      "ayah": 14,
+      "surah": 87,
+      "text": "Successful indeed is he who purifies himself,He said:That is, the one who fears God both in secret and in public has indeed triumphed (fāza) and attained felicity (saʿāda).His words, Exalted is He:"
+    },
+    {
+      "ayah": 16,
+      "surah": 87,
+      "text": "Nay, but you prefer the life of this world,He said:The believer should not be in this world other than as a man riding a piece of wood in the sea, crying the while, �O Lord! O Lord! (Yā Rabb! Yā Rabb!), in the hope that He may save him from it. Every believing servant who has renounced this world, [will find that] God has placed in charge of him an angel, who will plant in his heart all kinds of wisdom (ḥikam), just as the people of this world plant different kinds of trees in their gardens.His words, Exalted is He:"
+    },
+    {
+      "ayah": 3,
+      "surah": 87,
+      "text": "and [God] who determined and guided,He said:He destined for them wretchedness (shaqāwa) or felicity (saʿāda). Then He took the people of felicity into His care and left the people of wretchedness to themselves.He said:Guidance (hudā) comes in two forms, one being that which is made clear (bayān), and the other, guardianship (tawallī) from God, Exalted is He. Do you not see how the suckling infant is guided to the means of its subsistence, the breast of its mother ⸢the moment it is born⸣, due to God�s caring for it, and inspiring it [with what to do].His words, Exalted is He:"
+    }
+  ],
+  "empty_ayahs": [{ "ayah": 5, "surah": 87 }, { "ayah": 9, "surah": 87 }]
+}
