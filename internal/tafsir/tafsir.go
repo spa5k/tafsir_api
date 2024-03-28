@@ -3,8 +3,7 @@ package tafsir
 import "encoding/json"
 
 // Tafsir represents your data structure for Tafsir elements.
-//type Tafsir []Element
-
+// type Tafsir []Element
 func (r *Tafsir) Marshal() ([]byte, error) {
 	return json.Marshal(r)
 }

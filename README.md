@@ -103,7 +103,7 @@ You can check [https://github.com/spa5k/tafsir_api/blob/main/internal/strategies
 
 Thank you for being a part of our mission to spread the message of God to the world.
 
-
 ### Other Similar Projects:
+
 - [Hadith API](https://github.com/fawazahmed0/hadith-api#readme)
 - [Quran API](https://github.com/fawazahmed0/quran-api#readme)

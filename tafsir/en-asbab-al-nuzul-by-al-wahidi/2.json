@@ -640,5 +640,16 @@
       "surah": 2,
       "text": "(We have revealed unto thee clear tokens �) [2:99]. Said Ibn �Abbas: �This is a reply to Ibn Suwriya when he said to Allah�s Messenger, Allah bless him and give him peace: �O Muhammad! You did not bring anything that we know, and no clear token has been revealed to you by means of which we follow you�. And, hence, Allah revealed this verse�."
     }
+  ],
+  "empty_ayahs": [
+    { "ayah": 56, "surah": 2 },
+    { "ayah": 60, "surah": 2 },
+    { "ayah": 87, "surah": 2 },
+    { "ayah": 127, "surah": 2 },
+    { "ayah": 171, "surah": 2 },
+    { "ayah": 216, "surah": 2 },
+    { "ayah": 249, "surah": 2 },
+    { "ayah": 273, "surah": 2 },
+    { "ayah": 283, "surah": 2 }
   ]
 }

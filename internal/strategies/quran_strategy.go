@@ -22,7 +22,7 @@ type QuranCOMTafsir struct {
 }
 
 func (q *QuranStrategy) GetAyah(ayahNumber int, surahNumber int, tafsirNumber int) (string, error) {
-	var quranUrl = "https://api.quran.com/api/v4"
+	quranUrl := "https://api.quran.com/api/v4"
 	ayahUrl := fmt.Sprintf("%s/tafsir/%d/by_ayah/%d:%d", quranUrl, tafsirNumber, surahNumber, ayahNumber)
 
 	// Make an HTTP GET request to fetch the ayah text

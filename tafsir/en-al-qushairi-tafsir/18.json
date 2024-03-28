@@ -93,10 +93,10 @@
     }
   ],
   "empty_ayahs": [
-    { "ayah": 20, "surah": 18 },
-    { "ayah": 42, "surah": 18 },
-    { "ayah": 64, "surah": 18 },
-    { "ayah": 86, "surah": 18 },
-    { "ayah": 108, "surah": 18 }
+    { "ayah": 25, "surah": 18 },
+    { "ayah": 51, "surah": 18 },
+    { "ayah": 75, "surah": 18 },
+    { "ayah": 89, "surah": 18 },
+    { "ayah": 109, "surah": 18 }
   ]
 }
