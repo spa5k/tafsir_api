@@ -107,3 +107,7 @@ Thank you for being a part of our mission to spread the message of God to the wo
 
 - [Hadith API](https://github.com/fawazahmed0/hadith-api#readme)
 - [Quran API](https://github.com/fawazahmed0/quran-api#readme)
+
+
+## Notes
+Some tafsirs, such as Fi Zilal al-Qur'an by Sayyid Qutb, reflect the personal, historical, or ideological perspectives of their authors and may not align with traditional scholarly consensus. Users are encouraged to consult qualified scholars and classical tafsirs for deeper understanding and context.
