@@ -110,4 +110,4 @@ Thank you for being a part of our mission to spread the message of God to the wo
 
 
 ## Notes
-Some tafsirs, such as Fi Zilal al-Qur'an by Sayyid Qutb, were removed because of reports of problematic aqeedah by some users [#25](https://github.com/spa5k/tafsir_api/issues/25)
+Some tafsirs, such as Fi Zilal al-Qur'an by Sayyid Qutb, were removed due to reports of problematic aqeedah by some users [#25](https://github.com/spa5k/tafsir_api/issues/25)
