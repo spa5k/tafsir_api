@@ -2,7 +2,7 @@ module tafsir_go
 
 go 1.23.0
 
-toolchain go1.25.3
+toolchain go1.25.4
 
 require github.com/PuerkitoBio/goquery v1.10.3
 
