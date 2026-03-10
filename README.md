@@ -38,7 +38,7 @@ Welcome to the Tafsir API repository, a comprehensive collection of Quran Tafsir
 
 ### Self-hosting (recommended)
 
-You can and should download `data/api` and host it yourself (instead of depending only on public CDNs).
+You can and should download `data` and `tafsir` folders and host it yourself (instead of depending only on public CDNs).
 
 Required folders to host:
 
