@@ -48,8 +48,8 @@ Required folders to host:
 Quick start:
 
 ```bash
-git clone --depth 1 https://github.com/spa5k/quran-timings-api.git
-cd quran-timings-api
+git clone --depth 1 https://github.com/spa5k/tafsir_api.git
+cd tafsir_api
 ```
 
 Then upload/serve the `data/` folder from your own static hosting (Nginx, Cloudflare R2, S3, Vercel static, etc.).
