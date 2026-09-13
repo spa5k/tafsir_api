@@ -213,6 +213,13 @@ We welcome contributions to enhance the API with more Tafsirs and additional fea
 
 You can check [https://github.com/spa5k/tafsir_api/blob/main/internal/strategies/quran_strategy.go](https://github.com/spa5k/tafsir_api/blob/main/internal/strategies/quran_strategy.go) for more info on how to add more Tafsirs.
 
+### Data generation
+
+Most editions are generated from [QUL](https://qul.tarteel.ai/resources) SQLite exports:
+
+1. `scripts/import_qul_sqlite.py` regenerates `tafsir/**` and `data/editions.json` from the downloaded databases.
+2. `scripts/check_tafsir_data.py` validates the generated tree (indexes match the per-ayah files, no empty text, no stale `empty_ayahs` entries).
+
 Thank you for being a part of our mission to spread the message of God to the world.
 
 ### Other Similar Projects:
