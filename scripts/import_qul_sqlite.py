@@ -42,16 +42,28 @@ def parse_key(key):
     return int(surah), int(ayah)
 
 
-def expand_keys(row):
+def expand_keys(row, surah_ayah_counts):
     ayah_key, _group_key, from_ayah, to_ayah, ayah_keys, _text = row
     if ayah_keys:
         return [parse_key(key.strip()) for key in ayah_keys.split(",") if key.strip()]
     if from_ayah and to_ayah:
-        from_surah, from_num = parse_key(from_ayah)
-        to_surah, to_num = parse_key(to_ayah)
-        if from_surah == to_surah:
-            return [(from_surah, ayah) for ayah in range(from_num, to_num + 1)]
+        return expand_range(parse_key(from_ayah), parse_key(to_ayah), surah_ayah_counts)
     return [parse_key(ayah_key)]
+
+
+def expand_range(start, end, surah_ayah_counts):
+    """Expand a from/to pair, crossing surah boundaries when needed."""
+    start_surah, start_ayah = start
+    end_surah, end_ayah = end
+    if start_surah == end_surah:
+        return [(start_surah, ayah) for ayah in range(start_ayah, end_ayah + 1)]
+
+    keys = []
+    for surah in range(start_surah, end_surah + 1):
+        first = start_ayah if surah == start_surah else 1
+        last = end_ayah if surah == end_surah else surah_ayah_counts.get(surah, 0)
+        keys.extend((surah, ayah) for ayah in range(first, last + 1))
+    return keys
 
 
 def load_manifest(path, db_root):
@@ -150,19 +162,42 @@ def load_surahs(path):
     return [(item["surah"], item["ayah"]) for item in surahs]
 
 
-def import_database(db_path):
+def import_database(db_path, surah_ayah_counts):
     con = sqlite3.connect(str(db_path))
     rows = con.execute(
         "select ayah_key, group_ayah_key, from_ayah, to_ayah, ayah_keys, text from tafsir"
-    )
+    ).fetchall()
+    con.close()
+
     by_key = defaultdict(list)
+    group_texts = {}
+    members = []
     for row in rows:
-        text = clean_text(row[5])
+        ayah_key, group_ayah_key, _from_ayah, _to_ayah, _ayah_keys, raw_text = row
+        text = clean_text(raw_text)
         if not text:
+            # QUL exports text-less member rows that point at the row holding
+            # the text (``group_ayah_key``); resolve them below instead of
+            # dropping the ayah.
+            members.append((ayah_key, group_ayah_key))
             continue
-        for key in expand_keys(row):
+
+        group_texts[ayah_key] = text
+        for key in expand_keys(row, surah_ayah_counts):
             if text not in by_key[key]:
                 by_key[key].append(text)
+
+    for ayah_key, group_ayah_key in members:
+        text = group_texts.get(group_ayah_key)
+        if not text:
+            continue
+        try:
+            key = parse_key(ayah_key)
+        except ValueError:
+            continue
+        if text not in by_key[key]:
+            by_key[key].append(text)
+
     return {key: "\n\n".join(parts) for key, parts in by_key.items()}
 
 
@@ -247,6 +282,7 @@ def update_readme(path, editions):
 def main():
     args = parse_args()
     surahs = load_surahs(args.ayah_data)
+    surah_ayah_counts = dict(surahs)
     resources = load_manifest(args.manifest, args.db_root)
     existing_editions = load_editions(args.data_editions)
     resolve_slugs(resources, existing_editions)
@@ -254,7 +290,7 @@ def main():
     stats = {}
     for resource in resources:
         print(f"import {resource['id']} {resource['slug']}")
-        texts = import_database(resource["db_path"])
+        texts = import_database(resource["db_path"], surah_ayah_counts)
         stats[resource["slug"]] = write_tafsir(args.output_root, resource["slug"], texts, surahs)
 
     editions = upsert_editions(existing_editions, resources)
