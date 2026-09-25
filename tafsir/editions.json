@@ -974,5 +974,13 @@
     "name": "Al-Kashshaf Al-Zamakhshari",
     "slug": "al-kashshaf-al-zamakhshari",
     "source": "https://qul.tarteel.ai/resources/tafsir/510"
+  },
+  {
+    "author_name": "Dr. Ayman Fathih Al-Amer",
+    "id": 9001,
+    "language_name": "arabic",
+    "name": "Tafsir Al-Jami' Al-Wajiz",
+    "slug": "ar-tafsir-al-jami-al-wajiz",
+    "source": "https://github.com/yamanamr/quran-tafsir-jami-wajiz"
   }
 ]
