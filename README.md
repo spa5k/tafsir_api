@@ -26,24 +26,25 @@ Welcome to the Tafsir API repository, a comprehensive collection of Quran Tafsir
 
 - `https://cdn.jsdelivr.net/gh/spa5k/tafsir_api@{apiVersion}/{endpoint}`
 
-> Versioning - By default, it uses main branch, which you can use as `@main` or `@v1` etc. You can also use commit hash as versioning.
+> **Versioning** — Pin an exact release tag, for example `@v1.2.1`, in production. Use `@main` for the latest data. You can also use a commit hash as the version.
+>
+> ⚠️ **jsDelivr caching warning** — jsDelivr caches release tags with `cache-control: immutable` for up to one year. This is good for pinned tags such as `@v1.2.1`. But it means a moved major tag such as `@v1` can serve **old cached files** after a release. Purge requests do not fully clear it. On jsDelivr, always pin an exact `vX.Y.Z` tag, or use `@main`. The `@v1` alias works on the other CDNs below, because they resolve tags live.
 
 ### Base URLs -
 
-1. JS Delivr: `https://cdn.jsdelivr.net/gh/spa5k/tafsir_api@main/tafsir`
-2. Git Hack: `https://rawcdn.githack.com/spa5k/tafsir_api/bf42646e16973c59a0789b7a3ad065ff6ad6b0bf/tafsir`
+1. JS Delivr: `https://cdn.jsdelivr.net/gh/spa5k/tafsir_api@v1.2.1/tafsir` — pin an exact tag, see the warning above. Fallback domains: `fastly.jsdelivr.net`, `gcore.jsdelivr.net`
+2. Git Hack: `https://rawcdn.githack.com/spa5k/tafsir_api/main/tafsir` (dev tier: `raw.githack.com`)
 3. Staticaly: `https://cdn.statically.io/gh/spa5k/tafsir_api/main/tafsir`
 4. Github: `https://raw.githubusercontent.com/spa5k/tafsir_api/main/tafsir`
-5. Gitloaf: `https://gitloaf.com/cdn/spa5k/tafsir_api/main/tafsir`
 
-### Self-hosting (recommended)
+### Self-hosting (strongly recommended)
 
-You can and should download `data` and `tafsir` folders and host it yourself (instead of depending only on public CDNs).
+Public CDNs put a third-party cache between your app and the data. jsDelivr can serve stale files for up to a year. Rate limits and outages are outside your control. For production apps, host the data yourself. The dataset is static JSON, so any static host or CDN works, and you set the caching rules.
 
-Required folders to host:
+What to host:
 
-- `data/**`
-- `tafsir/**`
+- `tafsir/**` — the tafsir JSON files (this is the API)
+- `data/**` — editions list and ayah metadata
 
 Quick start:
 
@@ -52,7 +53,16 @@ git clone --depth 1 https://github.com/spa5k/tafsir_api.git
 cd tafsir_api
 ```
 
-Then upload/serve the `data/` folder from your own static hosting (Nginx, Cloudflare R2, S3, Vercel static, etc.).
+Then upload the `data/` and `tafsir/` folders to your own static hosting. Any of these works:
+
+- Object storage: Cloudflare R2, S3, Backblaze B2
+- Static hosts: Netlify, Cloudflare Pages, GitHub Pages
+- Your own server: Nginx, Caddy, or any static file server
+
+Tips:
+
+- Set long cache headers, for example `max-age=86400`. Purge or redeploy when you update the data.
+- Keep the folder structure. Clients build URLs as `{base}/tafsir/{edition}/{surah}.json`.
 
 ## Endpoints:
 
