@@ -239,15 +239,18 @@ def load_editions(path):
 
 
 def upsert_editions(existing, resources):
-    by_slug = {edition["slug"]: edition for edition in existing}
-    ordered = [edition for edition in existing if edition["slug"] not in {resource["slug"] for resource in resources}]
+    """Keep the published edition order; append only genuinely new editions."""
+    existing_by_slug = {edition["slug"]: edition for edition in existing}
+    ordered = list(existing)
     for resource in resources:
-        previous = by_slug.get(resource["slug"], {})
+        if resource["slug"] in existing_by_slug:
+            continue
+        existing_by_slug[resource["slug"]] = resource
         ordered.append(
             {
-                "author_name": previous.get("author_name") or resource["name"],
+                "author_name": resource["name"],
                 "id": resource["id"],
-                "language_name": previous.get("language_name") or infer_language(resource["tags"]),
+                "language_name": infer_language(resource["tags"]),
                 "name": resource["name"],
                 "slug": resource["slug"],
                 "source": resource["source"],
