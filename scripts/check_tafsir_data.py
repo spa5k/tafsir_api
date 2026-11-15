@@ -7,6 +7,7 @@ Checks performed for every edition:
   ``{ "ayahs": [...] }`` wrapper and unsorted legacy indexes)
 * an ayah never has both a per-ayah file and an ``empty_ayahs.json`` entry
 * per-ayah files never contain empty text
+* ayahs listed in ``data/known_source_errors.json`` stay empty
 
 Coverage gaps (ayahs without text and without an ``empty_ayahs.json`` entry)
 are reported as warnings because several upstream tafsirs comment only on a
@@ -109,7 +110,18 @@ def parse_args():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--tafsir-root", default="tafsir")
     parser.add_argument("--ayah-data", default=DEFAULT_AYAH_DATA)
+    parser.add_argument("--known-errors", default="data/known_source_errors.json")
     return parser.parse_args()
+
+
+def check_known_errors(root, path, errors):
+    """Ayahs listed in known_source_errors.json must stay empty."""
+    for entry in json.loads(Path(path).read_text()):
+        for slug in entry["slugs"]:
+            for key in entry["ayahs"]:
+                surah, ayah = key.split(":")
+                if (root / slug / surah / f"{ayah}.json").exists():
+                    errors.append(f"{slug} {key}: known source error has text again ({entry['upstream']})")
 
 
 def main():
@@ -122,6 +134,7 @@ def main():
     warnings = []
     for edition_dir in editions.values():
         check_edition(edition_dir, ayah_counts, errors, warnings)
+    check_known_errors(root, args.known_errors, errors)
 
     for warning in warnings:
         print(f"warning: {warning}")
