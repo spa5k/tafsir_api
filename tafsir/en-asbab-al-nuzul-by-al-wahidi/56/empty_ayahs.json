@@ -1,9 +1,362 @@
 [
-  { "surah": 56, "ayah": 2 },
-  { "surah": 56, "ayah": 19 },
-  { "surah": 56, "ayah": 20 },
-  { "surah": 56, "ayah": 46 },
-  { "surah": 56, "ayah": 57 },
-  { "surah": 56, "ayah": 75 },
-  { "surah": 56, "ayah": 96 }
+  {
+    "surah": 56,
+    "ayah": 1
+  },
+  {
+    "surah": 56,
+    "ayah": 2
+  },
+  {
+    "surah": 56,
+    "ayah": 3
+  },
+  {
+    "surah": 56,
+    "ayah": 4
+  },
+  {
+    "surah": 56,
+    "ayah": 5
+  },
+  {
+    "surah": 56,
+    "ayah": 6
+  },
+  {
+    "surah": 56,
+    "ayah": 7
+  },
+  {
+    "surah": 56,
+    "ayah": 8
+  },
+  {
+    "surah": 56,
+    "ayah": 9
+  },
+  {
+    "surah": 56,
+    "ayah": 10
+  },
+  {
+    "surah": 56,
+    "ayah": 11
+  },
+  {
+    "surah": 56,
+    "ayah": 12
+  },
+  {
+    "surah": 56,
+    "ayah": 15
+  },
+  {
+    "surah": 56,
+    "ayah": 16
+  },
+  {
+    "surah": 56,
+    "ayah": 17
+  },
+  {
+    "surah": 56,
+    "ayah": 18
+  },
+  {
+    "surah": 56,
+    "ayah": 19
+  },
+  {
+    "surah": 56,
+    "ayah": 20
+  },
+  {
+    "surah": 56,
+    "ayah": 21
+  },
+  {
+    "surah": 56,
+    "ayah": 22
+  },
+  {
+    "surah": 56,
+    "ayah": 23
+  },
+  {
+    "surah": 56,
+    "ayah": 24
+  },
+  {
+    "surah": 56,
+    "ayah": 25
+  },
+  {
+    "surah": 56,
+    "ayah": 26
+  },
+  {
+    "surah": 56,
+    "ayah": 27
+  },
+  {
+    "surah": 56,
+    "ayah": 29
+  },
+  {
+    "surah": 56,
+    "ayah": 30
+  },
+  {
+    "surah": 56,
+    "ayah": 31
+  },
+  {
+    "surah": 56,
+    "ayah": 32
+  },
+  {
+    "surah": 56,
+    "ayah": 33
+  },
+  {
+    "surah": 56,
+    "ayah": 34
+  },
+  {
+    "surah": 56,
+    "ayah": 35
+  },
+  {
+    "surah": 56,
+    "ayah": 36
+  },
+  {
+    "surah": 56,
+    "ayah": 37
+  },
+  {
+    "surah": 56,
+    "ayah": 38
+  },
+  {
+    "surah": 56,
+    "ayah": 41
+  },
+  {
+    "surah": 56,
+    "ayah": 42
+  },
+  {
+    "surah": 56,
+    "ayah": 43
+  },
+  {
+    "surah": 56,
+    "ayah": 44
+  },
+  {
+    "surah": 56,
+    "ayah": 45
+  },
+  {
+    "surah": 56,
+    "ayah": 46
+  },
+  {
+    "surah": 56,
+    "ayah": 47
+  },
+  {
+    "surah": 56,
+    "ayah": 48
+  },
+  {
+    "surah": 56,
+    "ayah": 49
+  },
+  {
+    "surah": 56,
+    "ayah": 50
+  },
+  {
+    "surah": 56,
+    "ayah": 51
+  },
+  {
+    "surah": 56,
+    "ayah": 52
+  },
+  {
+    "surah": 56,
+    "ayah": 53
+  },
+  {
+    "surah": 56,
+    "ayah": 54
+  },
+  {
+    "surah": 56,
+    "ayah": 55
+  },
+  {
+    "surah": 56,
+    "ayah": 56
+  },
+  {
+    "surah": 56,
+    "ayah": 57
+  },
+  {
+    "surah": 56,
+    "ayah": 58
+  },
+  {
+    "surah": 56,
+    "ayah": 59
+  },
+  {
+    "surah": 56,
+    "ayah": 60
+  },
+  {
+    "surah": 56,
+    "ayah": 61
+  },
+  {
+    "surah": 56,
+    "ayah": 62
+  },
+  {
+    "surah": 56,
+    "ayah": 63
+  },
+  {
+    "surah": 56,
+    "ayah": 64
+  },
+  {
+    "surah": 56,
+    "ayah": 65
+  },
+  {
+    "surah": 56,
+    "ayah": 66
+  },
+  {
+    "surah": 56,
+    "ayah": 67
+  },
+  {
+    "surah": 56,
+    "ayah": 68
+  },
+  {
+    "surah": 56,
+    "ayah": 69
+  },
+  {
+    "surah": 56,
+    "ayah": 70
+  },
+  {
+    "surah": 56,
+    "ayah": 71
+  },
+  {
+    "surah": 56,
+    "ayah": 72
+  },
+  {
+    "surah": 56,
+    "ayah": 73
+  },
+  {
+    "surah": 56,
+    "ayah": 74
+  },
+  {
+    "surah": 56,
+    "ayah": 75
+  },
+  {
+    "surah": 56,
+    "ayah": 76
+  },
+  {
+    "surah": 56,
+    "ayah": 77
+  },
+  {
+    "surah": 56,
+    "ayah": 78
+  },
+  {
+    "surah": 56,
+    "ayah": 79
+  },
+  {
+    "surah": 56,
+    "ayah": 80
+  },
+  {
+    "surah": 56,
+    "ayah": 81
+  },
+  {
+    "surah": 56,
+    "ayah": 83
+  },
+  {
+    "surah": 56,
+    "ayah": 84
+  },
+  {
+    "surah": 56,
+    "ayah": 85
+  },
+  {
+    "surah": 56,
+    "ayah": 86
+  },
+  {
+    "surah": 56,
+    "ayah": 87
+  },
+  {
+    "surah": 56,
+    "ayah": 88
+  },
+  {
+    "surah": 56,
+    "ayah": 89
+  },
+  {
+    "surah": 56,
+    "ayah": 90
+  },
+  {
+    "surah": 56,
+    "ayah": 91
+  },
+  {
+    "surah": 56,
+    "ayah": 92
+  },
+  {
+    "surah": 56,
+    "ayah": 93
+  },
+  {
+    "surah": 56,
+    "ayah": 94
+  },
+  {
+    "surah": 56,
+    "ayah": 95
+  },
+  {
+    "surah": 56,
+    "ayah": 96
+  }
 ]
