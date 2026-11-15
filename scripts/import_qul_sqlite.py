@@ -24,7 +24,17 @@ def parse_args():
     parser.add_argument("--tafsir-editions", default="tafsir/editions.json")
     parser.add_argument("--readme", default="README.md")
     parser.add_argument("--output-root", default="tafsir")
+    parser.add_argument("--known-errors", default="data/known_source_errors.json")
     return parser.parse_args()
+
+
+def load_known_errors(path):
+    """Map slug -> ayah keys whose upstream text belongs to a different ayah."""
+    skipped = defaultdict(set)
+    for entry in json.loads(Path(path).read_text()):
+        for slug in entry["slugs"]:
+            skipped[slug] |= {parse_key(key) for key in entry["ayahs"]}
+    return skipped
 
 
 def clean_text(value):
@@ -290,10 +300,14 @@ def main():
     existing_editions = load_editions(args.data_editions)
     resolve_slugs(resources, existing_editions)
 
+    known_errors = load_known_errors(args.known_errors)
+
     stats = {}
     for resource in resources:
         print(f"import {resource['id']} {resource['slug']}")
         texts = import_database(resource["db_path"], surah_ayah_counts)
+        for key in known_errors.get(resource["slug"], ()):
+            texts.pop(key, None)
         stats[resource["slug"]] = write_tafsir(args.output_root, resource["slug"], texts, surahs)
 
     editions = upsert_editions(existing_editions, resources)

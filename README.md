@@ -230,7 +230,10 @@ Most editions are generated from [QUL](https://qul.tarteel.ai/resources) SQLite 
 
 1. `scripts/import_qul_sqlite.py` regenerates `tafsir/**` and `data/editions.json` from the downloaded databases.
 2. `scripts/import_jami_wajiz.py` imports [Al-Jami' Al-Wajiz](https://github.com/yamanamr/quran-tafsir-jami-wajiz) (Dr. Ayman Fathih Al-Amer) from its JSON export. Clone the source into `tmp/jami-wajiz` first. The tafsir is licensed [CC BY-ND 4.0](https://creativecommons.org/licenses/by-nd/4.0/): the wording is redistributed unchanged.
-3. `scripts/check_tafsir_data.py` validates the generated tree (indexes match the per-ayah files, no empty text, no stale `empty_ayahs` entries).
+3. `scripts/import_altafsir.py` imports English tafsirs from [altafsir.com](https://www.altafsir.com/) (for example Asbab Al-Nuzul by Al-Wahidi, id 86). It checks the title and copyright footer of every page, so text from another tafsir cannot get in.
+4. `scripts/check_tafsir_data.py` validates the generated tree (indexes match the per-ayah files, no empty text, no stale `empty_ayahs` entries, and the ayahs in `data/known_source_errors.json` stay empty).
+
+`data/known_source_errors.json` lists ayahs where the upstream text belongs to a different ayah. The importers leave these ayahs empty. See [Known data issues](#known-data-issues).
 
 Thank you for being a part of our mission to spread the message of God to the world.
 
@@ -238,6 +241,17 @@ Thank you for being a part of our mission to spread the message of God to the wo
 
 - [Hadith API](https://github.com/fawazahmed0/hadith-api#readme)
 - [Quran API](https://github.com/fawazahmed0/quran-api#readme)
+
+## Known data issues
+
+Some upstream sources attach commentary to the wrong ayah. We do not write or move tafsir text ourselves. When the correct text is not in the source, we leave the ayah empty and list it in that surah's `empty_ayahs.json` and in [`data/known_source_errors.json`](data/known_source_errors.json). We report each issue upstream.
+
+| Edition | Ayahs left empty | Problem in the source | Upstream report |
+| ------- | ---------------- | --------------------- | --------------- |
+| `ur-tafsir-bayan-ul-quran`, `tafsir-bayan-ul-quran` | 43 ayahs: 13:1, 20:1, 21:1, 26:1–3, 28:1–2, 29:1, 30:1–2, 32:1–2, 61:1, 71:1–2, 72:1, 74:1, 81:1–3, 82:1–4, 86:1–3, 91:1, 93:1, 95:1–2, 96:1–3, 100:1, 101:1, 105:1, 106:1, 110:1–2, 111:1–2 | Grouped with the last ayah of the previous surah. The text is the commentary on that previous ayah. | [QUL #1055](https://github.com/TarteelAI/quranic-universal-library/issues/1055) |
+| `en-tafsir-al-mukhtasar` | 2:3, 4:98, 14:49, 37:165, 42:49 | Grouped with the next ayah. The text explains only the next ayah. | [QUL #968](https://github.com/TarteelAI/quranic-universal-library/issues/968) |
+
+If you find a problem in the data, please [open an issue](https://github.com/spa5k/tafsir_api/issues). Include the edition slug and the ayah.
 
 ## Notes
 
