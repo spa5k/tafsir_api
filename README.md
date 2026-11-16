@@ -260,6 +260,41 @@ Thank you for being a part of our mission to spread the message of God to the wo
 - [Hadith API](https://github.com/fawazahmed0/hadith-api#readme)
 - [Quran API](https://github.com/fawazahmed0/quran-api#readme)
 
+## Projects using this API
+
+These public projects use the Tafsir API data. To add your project, [open an issue](https://github.com/spa5k/tafsir_api/issues) or a pull request.
+
+### Apps and websites
+
+| Project | Platform | Description |
+| ------- | -------- | ----------- |
+| [Al-Quran](https://play.google.com/store/apps/details?id=com.tariqmahmoodawan.alquran) | Android | Quran app with Urdu tafsir |
+| [QuranWBW](https://quranwbw.com) ([source](https://github.com/marwan/quranwbw)) | Web | Read, listen to, and learn the Quran word by word |
+| [Mihrab](https://mihrab.elghamri.se/) ([source](https://github.com/MihrabHQ/Mihrab)) | Mobile | Prayer times, Quran, duas and dhikr |
+| [Khushu](https://github.com/greykaizen/khushu) | Android | Salah times, tasbeeh, Quran and hadith, private and free |
+| [Ummah Library](https://ummahlibrary.org) ([source](https://github.com/UmmahLibrary/ummah-library)) | Web | Open-source Quran platform and Islamic knowledge library |
+| [Learn the Quran](https://learn-the-quran.netlify.app/) ([source](https://github.com/Quran-Summer-of-Code/Learn-Quran-App)) | Mobile | Listen to, read and learn the Quran |
+| [Tadabbur](https://tadabbur.fahrezi.fyi) ([source](https://github.com/fahreziadh/tadabbur)) | Web | Quran study: read, reflect and take notes |
+| [Noor Connect](https://noor-connect.vercel.app) ([source](https://github.com/darkmaster0345/Noor-connect)) | Web | Privacy-focused Islamic app |
+| [Quran Desktop](https://github.com/Obscyra/quran-desktop) | Windows, macOS | Madani Mushaf reader |
+| [Quran Reader](https://ask-786.github.io/quran-reader/) ([source](https://github.com/ask-786/quran-reader)) | Windows, macOS, Linux | Offline Mushaf reader with tafsir and recitation |
+| [MushafPlus](https://mon-coran-kappa.vercel.app) ([source](https://github.com/mohamedeyaf820/mon-coran)) | Web | Read, listen to and understand the Quran in Hafs and Warsh |
+| [Hafiz](https://hafizquran.app) ([source](https://github.com/71iq/Hafiz)) | Mobile | Memorize the Quran through reflection |
+| [Munib Tracker](https://munibtracker.app) ([source](https://github.com/mubbi/munib-tracker)) | Web | Track salah, dhikr and qadha |
+| [IqraTime](https://iqratime.com/) ([source](https://github.com/UPASCO/IqraTime)) | Web | Quran reading and study |
+
+### Libraries, APIs and tools
+
+| Project | Description |
+| ------- | ----------- |
+| [islam.js](https://github.com/dev-ahmadbilal/islam.js) | TypeScript package with Quran text, tafsir and hadith ([npm](https://www.npmjs.com/package/islam.js)) |
+| [Uloom Quran](https://github.com/h9-tec/uloom-quran) | Quranic sciences platform with comparative tafsir and semantic search |
+| [DeenBridge AI](https://github.com/Deen-Bridge/dnb-ai) | Islamic knowledge assistant with verified Quran sources |
+| [Bonyan API](https://api.bonyanoss.org) ([source](https://github.com/BonyanOSS/Bonyan-API)) | Quran and supplications API |
+| [Aayah Info API](https://api.aayah.info) ([source](https://github.com/digitaldrreamer/aayah-info-api)) | Open-source API for Islamic content |
+| [Quran MCP](https://github.com/Prince77-7/quranMCP) | MCP server for Quran, tafsir and hadith |
+| [ScriptureBot](https://github.com/roman5x30/scripturebot) | Discord bot for quick access to Quran text and tafsir |
+
 ## Known data issues
 
 Some upstream sources attach commentary to the wrong ayah. We do not write or move tafsir text ourselves. When the correct text is not in the source, we leave the ayah empty and list it in that surah's `empty_ayahs.json` and in [`data/known_source_errors.json`](data/known_source_errors.json). We report each issue upstream.
