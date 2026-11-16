@@ -273,8 +273,8 @@ def update_readme(path, editions):
     readme = Path(path)
     text = readme.read_text()
     text = re.sub(
-        r"\*\*\d+ Tafsirs\*\*: Access \d+ different Tafsirs",
-        f"**{len(editions)} Tafsirs**: Access {len(editions)} different Tafsirs",
+        r"\*\*\d+ tafsirs\*\*: \d+ different tafsirs",
+        f"**{len(editions)} tafsirs**: {len(editions)} different tafsirs",
         text,
     )
     header = (
@@ -288,7 +288,7 @@ def update_readme(path, editions):
             f"{edition['name']} | {edition['slug']} | {edition['source']} |"
         )
     table = "\n".join(rows)
-    text = re.sub(r"## Editions:\n\n.*?\n\n## Share:", f"## Editions:\n\n{table}\n\n## Share:", text, flags=re.S)
+    text = re.sub(r"## Editions\n\n.*?\n\n## ", f"## Editions\n\n{table}\n\n## ", text, flags=re.S)
     readme.write_text(text)
 
 
