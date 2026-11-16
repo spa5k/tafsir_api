@@ -1,61 +1,98 @@
 <h1 align="center">Tafsir API</h1>
 
 <p align="center">
-  <img  src="https://raw.githubusercontent.com/spa5k/tafsir_api/main/asset/tafsirapi.png">
+  <img src="https://raw.githubusercontent.com/spa5k/tafsir_api/main/asset/tafsirapi.png" alt="Tafsir API">
 </p>
-
-[![](https://data.jsdelivr.com/v1/package/gh/spa5k/tafsir_api/badge)](https://www.jsdelivr.com/package/gh/spa5k/tafsir_api)
-[![](https://data.jsdelivr.com/v1/package/gh/spa5k/tafsir_api/badge/rank)](https://www.jsdelivr.com/package/gh/spa5k/tafsir_api)
-[![Latest release](https://img.shields.io/github/v/release/spa5k/tafsir_api)](https://github.com/spa5k/tafsir_api/releases/latest)
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/spa5k/tafsir_api/main/asset/bismilllah.jpg">
+  <a href="https://www.jsdelivr.com/package/gh/spa5k/tafsir_api"><img src="https://data.jsdelivr.com/v1/package/gh/spa5k/tafsir_api/badge" alt="jsDelivr hits"></a>
+  <a href="https://www.jsdelivr.com/package/gh/spa5k/tafsir_api"><img src="https://data.jsdelivr.com/v1/package/gh/spa5k/tafsir_api/badge/rank" alt="jsDelivr rank"></a>
+  <a href="https://github.com/spa5k/tafsir_api/releases/latest"><img src="https://img.shields.io/github/v/release/spa5k/tafsir_api" alt="Latest release"></a>
 </p>
 
-**In the name of Allah, the Entirely Merciful, the Especially Merciful, who has guided me to do this work**
+<p align="center">
+  <img src="https://raw.githubusercontent.com/spa5k/tafsir_api/main/asset/bismilllah.jpg" alt="Bismillah">
+</p>
 
-Welcome to the Tafsir API repository, a comprehensive collection of Quran Tafsirs presented in a REST architectural style. This API is designed to facilitate the development of websites and applications, with the primary aim of spreading the word of God to people around the world.
+<p align="center"><b>In the name of Allah, the Entirely Merciful, the Especially Merciful, who has guided me to do this work</b></p>
+
+Tafsir API is a free collection of Quran tafsirs as static JSON files. Use it in websites and apps to help people around the world understand the word of God.
+
+## Contents
+
+- [Features](#features)
+- [Quick start](#quick-start)
+- [Endpoints](#endpoints)
+- [Versioning](#versioning)
+- [Base URLs](#base-urls)
+- [Self-hosting](#self-hosting)
+- [Latest release](#latest-release)
+- [Editions](#editions)
+- [Projects using this API](#projects-using-this-api)
+- [Known data issues](#known-data-issues)
+- [Contributing](#contributing)
 
 ## Features
 
-- **Free & Lightning-Fast**: Our API provides free access to Quran Tafsirs with blazing-fast response times.
-- **No Rate Limits**: There are no rate limits imposed on API usage, ensuring unrestricted access to the content.
-- **Multilingual Support**: The API offers Tafsirs in various languages.
-- **123 Tafsirs**: Access 123 different Tafsirs to explore Quranic interpretations.
+- **Free and fast**: static JSON files on public CDNs.
+- **No rate limits**: use the API as much as you need.
+- **Many languages**: tafsirs in Arabic, English, Urdu, Bengali, Russian and more.
+- **123 tafsirs**: 123 different tafsirs, listed in [Editions](#editions).
+- **Used in production**: more than 16 million requests each month on jsDelivr. See [Projects using this API](#projects-using-this-api).
 
-## Latest release
+## Quick start
 
-**Current version: [`v1.2.3`](https://github.com/spa5k/tafsir_api/releases/tag/v1.2.3)** (2026-11-15)
+Get the list of editions:
 
 ```text
 https://cdn.jsdelivr.net/gh/spa5k/tafsir_api@v1.2.3/tafsir/editions.json
 ```
 
-| Version | Date | Changes |
-| ------- | ---- | ------- |
-| [v1.2.3](https://github.com/spa5k/tafsir_api/releases/tag/v1.2.3) | 2026-11-15 | Fixed Tahrir wa al-Tanwir 24:9 tashkeel. Bayan-ul-Quran: 43 surah-start ayahs that showed the previous surah's commentary are now empty. English Mukhtasar: 5 ayahs are now empty. Asbab al-Nuzul by al-Wahidi imported again from the source. See [Known data issues](#known-data-issues). |
-| [v1.2.2](https://github.com/spa5k/tafsir_api/releases/tag/v1.2.2) | 2026-09-30 | French Mukhtasar QUL update: fixed 79:21 and 10:3. |
-| [v1.2.1](https://github.com/spa5k/tafsir_api/releases/tag/v1.2.1) | 2026-09-25 | Added Tafsir Al-Jami' Al-Wajiz (Arabic). Synced QUL exports, with English Ibn Kathir fixes. |
-| [v1.2.0](https://github.com/spa5k/tafsir_api/releases/tag/v1.2.0) | 2026-09-13 | Fixed Al-Qurtubi 34:54 and 59:19. Restored English Ibn Kathir 1:1–1:7. |
+Get the tafsir of one ayah (edition `en-al-jalalayn`, surah 1, ayah 1):
 
-To get these fixes, change the version in your URLs to the current version. See all versions on the [releases page](https://github.com/spa5k/tafsir_api/releases).
+```text
+https://cdn.jsdelivr.net/gh/spa5k/tafsir_api@v1.2.3/tafsir/en-al-jalalayn/1/1.json
+```
 
-## URL Structure:
+URL structure:
 
-- `https://cdn.jsdelivr.net/gh/spa5k/tafsir_api@{apiVersion}/{endpoint}`
+```text
+https://cdn.jsdelivr.net/gh/spa5k/tafsir_api@{version}/tafsir/{endpoint}
+```
 
-> **Versioning** — Pin an exact release tag, for example `@v1.2.3`, in production. Use `@main` for the latest data. You can also use a commit hash as the version.
->
-> ⚠️ **jsDelivr caching warning** — jsDelivr caches release tags with `cache-control: immutable` for up to one year. This is good for pinned tags such as `@v1.2.3`. But it means a moved major tag such as `@v1` can serve **old cached files** after a release. Purge requests do not fully clear it. On jsDelivr, always pin an exact `vX.Y.Z` tag, or use `@main`. The `@v1` alias works on the other CDNs below, because they resolve tags live.
+## Endpoints
 
-### Base URLs -
+All paths are relative to `{base}/tafsir`.
 
-1. JS Delivr: `https://cdn.jsdelivr.net/gh/spa5k/tafsir_api@v1.2.3/tafsir` — pin an exact tag, see the warning above. Fallback domains: `fastly.jsdelivr.net`, `gcore.jsdelivr.net`
-2. Git Hack: `https://rawcdn.githack.com/spa5k/tafsir_api/main/tafsir` (dev tier: `raw.githack.com`)
-3. Staticaly: `https://cdn.statically.io/gh/spa5k/tafsir_api/main/tafsir`
-4. Github: `https://raw.githubusercontent.com/spa5k/tafsir_api/main/tafsir`
+| Endpoint | Returns | Example |
+| -------- | ------- | ------- |
+| `/editions.json` | All editions | [editions.json](https://cdn.jsdelivr.net/gh/spa5k/tafsir_api@v1.2.3/tafsir/editions.json) |
+| `/{edition}/{surah}.json` | All ayahs of one surah that have text | [en-al-jalalayn/1.json](https://cdn.jsdelivr.net/gh/spa5k/tafsir_api@v1.2.3/tafsir/en-al-jalalayn/1.json) |
+| `/{edition}/{surah}/{ayah}.json` | The tafsir of one ayah | [en-al-jalalayn/1/1.json](https://cdn.jsdelivr.net/gh/spa5k/tafsir_api@v1.2.3/tafsir/en-al-jalalayn/1/1.json) |
+| `/{edition}/{surah}/empty_ayahs.json` | The ayahs of one surah that have no text | [en-al-qushairi-tafsir/2/empty_ayahs.json](https://cdn.jsdelivr.net/gh/spa5k/tafsir_api@v1.2.3/tafsir/en-al-qushairi-tafsir/2/empty_ayahs.json) |
 
-### Self-hosting (strongly recommended)
+An ayah without text has no `{ayah}.json` file, so the request returns 404. Read `empty_ayahs.json` or the surah file to find these ayahs.
+
+## Versioning
+
+- **Production**: pin an exact release tag, for example `@v1.2.3`.
+- **Latest data**: use `@main`.
+- **Exact snapshot**: use a commit hash.
+
+> ⚠️ **jsDelivr caching warning**: jsDelivr caches release tags with `cache-control: immutable` for up to one year. This is good for pinned tags such as `@v1.2.3`. But a moved major tag such as `@v1` can serve **old cached files** after a release. Purge requests do not fully clear it. On jsDelivr, always pin an exact `vX.Y.Z` tag, or use `@main`. The `@v1` alias works on the other CDNs below, because they resolve tags live.
+
+## Base URLs
+
+| CDN | Base URL | Notes |
+| --- | -------- | ----- |
+| jsDelivr | `https://cdn.jsdelivr.net/gh/spa5k/tafsir_api@v1.2.3/tafsir` | Pin an exact tag. Fallback domains: `fastly.jsdelivr.net`, `gcore.jsdelivr.net` |
+| GitHack | `https://rawcdn.githack.com/spa5k/tafsir_api/main/tafsir` | Dev tier: `raw.githack.com` |
+| Statically | `https://cdn.statically.io/gh/spa5k/tafsir_api/main/tafsir` | |
+| GitHub | `https://raw.githubusercontent.com/spa5k/tafsir_api/main/tafsir` | |
+
+## Self-hosting
+
+We strongly recommend self-hosting for production apps.
 
 Public CDNs put a third-party cache between your app and the data. jsDelivr can serve stale files for up to a year. Rate limits and outages are outside your control. For production apps, host the data yourself. The dataset is static JSON, so any static host or CDN works, and you set the caching rules.
 
@@ -82,29 +119,24 @@ Tips:
 - Set long cache headers, for example `max-age=86400`. Purge or redeploy when you update the data.
 - Keep the folder structure. Clients build URLs as `{base}/tafsir/{edition}/{surah}.json`.
 
-## Endpoints:
+## Latest release
 
-- /editions
-  > Description: List all available editions.
+**Current version: [`v1.2.3`](https://github.com/spa5k/tafsir_api/releases/tag/v1.2.3)** (2026-11-15)
 
-  > [https://cdn.jsdelivr.net/gh/spa5k/tafsir_api@main/tafsir/editions.json](https://cdn.jsdelivr.net/gh/spa5k/tafsir_api@main/tafsir/editions.json)
+```text
+https://cdn.jsdelivr.net/gh/spa5k/tafsir_api@v1.2.3/tafsir/editions.json
+```
 
-- /editions/{editionSlug}/{surahNumber}
-  > Description: Fetch specific edition's Surahs with their Ayahs.
+| Version | Date | Changes |
+| ------- | ---- | ------- |
+| [v1.2.3](https://github.com/spa5k/tafsir_api/releases/tag/v1.2.3) | 2026-11-15 | Fixed Tahrir wa al-Tanwir 24:9 tashkeel. Bayan-ul-Quran: 43 surah-start ayahs that showed the previous surah's commentary are now empty. English Mukhtasar: 5 ayahs are now empty. Asbab al-Nuzul by al-Wahidi imported again from the source. See [Known data issues](#known-data-issues). |
+| [v1.2.2](https://github.com/spa5k/tafsir_api/releases/tag/v1.2.2) | 2026-09-30 | French Mukhtasar QUL update: fixed 79:21 and 10:3. |
+| [v1.2.1](https://github.com/spa5k/tafsir_api/releases/tag/v1.2.1) | 2026-09-25 | Added Tafsir Al-Jami' Al-Wajiz (Arabic). Synced QUL exports, with English Ibn Kathir fixes. |
+| [v1.2.0](https://github.com/spa5k/tafsir_api/releases/tag/v1.2.0) | 2026-09-13 | Fixed Al-Qurtubi 34:54 and 59:19. Restored English Ibn Kathir 1:1–1:7. |
 
-  > Example URL: [https://cdn.jsdelivr.net/gh/spa5k/tafsir_api@main/tafsir/en-al-jalalayn/1.json](https://cdn.jsdelivr.net/gh/spa5k/tafsir_api@main/tafsir/en-al-jalalayn/1.json)
+To get these fixes, change the version in your URLs to the current version. See all versions on the [releases page](https://github.com/spa5k/tafsir_api/releases).
 
-- /editions/{editionSlug}/{surahNumber}/{ayahNumber}
-  > Description: Fetch a specific edition's Surahs with their Ayahs.
-
-  > Example URL: [https://cdn.jsdelivr.net/gh/spa5k/tafsir_api@main/tafsir/en-al-jalalayn/1/1.json](https://cdn.jsdelivr.net/gh/spa5k/tafsir_api@main/tafsir/en-al-jalalayn/1/1.json)
-
-- /editions/{editionSlug}/{surahNumber}/empty_ayahs.json
-  > Description: Fetch the specific edition's Surahs that contain empty Ayahs.
-
-  > Example URL: [https://cdn.jsdelivr.net/gh/spa5k/tafsir_api@main/tafsir/en-al-qushairi-tafsir/2/empty_ayahs.json](https://cdn.jsdelivr.net/gh/spa5k/tafsir_api@main/tafsir/en-al-qushairi-tafsir/2/empty_ayahs.json)
-
-## Editions:
+## Editions
 
 | #  | Author Name | ID  | Language Name | Name | Slug | Source |
 | -- | ----------- | --- | ------------- | ---- | ---- | ------ |
@@ -232,34 +264,6 @@ Tips:
 | 122 | Al-Kashshaf Al-Zamakhshari | 510 | arabic | Al-Kashshaf Al-Zamakhshari | al-kashshaf-al-zamakhshari | https://qul.tarteel.ai/resources/tafsir/510 |
 | 123 | Dr. Ayman Fathih Al-Amer | 9001 | arabic | Tafsir Al-Jami' Al-Wajiz | ar-tafsir-al-jami-al-wajiz | https://github.com/yamanamr/quran-tafsir-jami-wajiz |
 
-## Share:
-
-Please Share this repo with your fellow mates and Star this repo by clicking on ⭐ button above ↗️
-
-## Contribution:
-
-We welcome contributions to enhance the API with more Tafsirs and additional features. If you're interested in contributing, please refer to the contribution guidelines for detailed instructions on how to add more Tafsirs.
-
-You can check [https://github.com/spa5k/tafsir_api/blob/main/internal/strategies/quran_strategy.go](https://github.com/spa5k/tafsir_api/blob/main/internal/strategies/quran_strategy.go) for more info on how to add more Tafsirs.
-
-### Data generation
-
-Most editions are generated from [QUL](https://qul.tarteel.ai/resources) SQLite exports:
-
-1. `scripts/import_qul_sqlite.py` regenerates `tafsir/**` and `data/editions.json` from the downloaded databases.
-2. `scripts/import_jami_wajiz.py` imports [Al-Jami' Al-Wajiz](https://github.com/yamanamr/quran-tafsir-jami-wajiz) (Dr. Ayman Fathih Al-Amer) from its JSON export. Clone the source into `tmp/jami-wajiz` first. The tafsir is licensed [CC BY-ND 4.0](https://creativecommons.org/licenses/by-nd/4.0/): the wording is redistributed unchanged.
-3. `scripts/import_altafsir.py` imports English tafsirs from [altafsir.com](https://www.altafsir.com/) (for example Asbab Al-Nuzul by Al-Wahidi, id 86). It checks the title and copyright footer of every page, so text from another tafsir cannot get in.
-4. `scripts/check_tafsir_data.py` validates the generated tree (indexes match the per-ayah files, no empty text, no stale `empty_ayahs` entries, and the ayahs in `data/known_source_errors.json` stay empty).
-
-`data/known_source_errors.json` lists ayahs where the upstream text belongs to a different ayah. The importers leave these ayahs empty. See [Known data issues](#known-data-issues).
-
-Thank you for being a part of our mission to spread the message of God to the world.
-
-### Other Similar Projects:
-
-- [Hadith API](https://github.com/fawazahmed0/hadith-api#readme)
-- [Quran API](https://github.com/fawazahmed0/quran-api#readme)
-
 ## Projects using this API
 
 These public projects use the Tafsir API data. To add your project, [open an issue](https://github.com/spa5k/tafsir_api/issues) or a pull request.
@@ -306,6 +310,32 @@ Some upstream sources attach commentary to the wrong ayah. We do not write or mo
 
 If you find a problem in the data, please [open an issue](https://github.com/spa5k/tafsir_api/issues). Include the edition slug and the ayah.
 
+## Contributing
+
+We welcome contributions: more tafsirs, data fixes and new features. To add a tafsir, see [`internal/strategies/quran_strategy.go`](internal/strategies/quran_strategy.go) and the scripts below.
+
+### Data generation
+
+Most editions are generated from [QUL](https://qul.tarteel.ai/resources) SQLite exports:
+
+1. `scripts/import_qul_sqlite.py` regenerates `tafsir/**` and `data/editions.json` from the downloaded databases.
+2. `scripts/import_jami_wajiz.py` imports [Al-Jami' Al-Wajiz](https://github.com/yamanamr/quran-tafsir-jami-wajiz) (Dr. Ayman Fathih Al-Amer) from its JSON export. Clone the source into `tmp/jami-wajiz` first. The tafsir is licensed [CC BY-ND 4.0](https://creativecommons.org/licenses/by-nd/4.0/): the wording is redistributed unchanged.
+3. `scripts/import_altafsir.py` imports English tafsirs from [altafsir.com](https://www.altafsir.com/) (for example Asbab Al-Nuzul by Al-Wahidi, id 86). It checks the title and copyright footer of every page, so text from another tafsir cannot get in.
+4. `scripts/check_tafsir_data.py` validates the generated tree (indexes match the per-ayah files, no empty text, no stale `empty_ayahs` entries, and the ayahs in `data/known_source_errors.json` stay empty).
+
+`data/known_source_errors.json` lists ayahs where the upstream text belongs to a different ayah. The importers leave these ayahs empty. See [Known data issues](#known-data-issues).
+
+## Similar projects
+
+- [Hadith API](https://github.com/fawazahmed0/hadith-api#readme)
+- [Quran API](https://github.com/fawazahmed0/quran-api#readme)
+
 ## Notes
 
-Some tafsirs, such as Fi Zilal al-Qur'an by Sayyid Qutb, were removed due to reports of problematic aqeedah by some users [#25](https://github.com/spa5k/tafsir_api/issues/25)
+Some tafsirs, such as Fi Zilal al-Qur'an by Sayyid Qutb, were removed due to reports of problematic aqeedah by some users ([#25](https://github.com/spa5k/tafsir_api/issues/25)).
+
+## Share
+
+Please share this repo with others, and give it a ⭐ star on GitHub.
+
+Thank you for being a part of our mission to spread the message of God to the world.
