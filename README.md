@@ -6,6 +6,7 @@
 
 [![](https://data.jsdelivr.com/v1/package/gh/spa5k/tafsir_api/badge)](https://www.jsdelivr.com/package/gh/spa5k/tafsir_api)
 [![](https://data.jsdelivr.com/v1/package/gh/spa5k/tafsir_api/badge/rank)](https://www.jsdelivr.com/package/gh/spa5k/tafsir_api)
+[![Latest release](https://img.shields.io/github/v/release/spa5k/tafsir_api)](https://github.com/spa5k/tafsir_api/releases/latest)
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/spa5k/tafsir_api/main/asset/bismilllah.jpg">
@@ -22,17 +23,34 @@ Welcome to the Tafsir API repository, a comprehensive collection of Quran Tafsir
 - **Multilingual Support**: The API offers Tafsirs in various languages.
 - **123 Tafsirs**: Access 123 different Tafsirs to explore Quranic interpretations.
 
+## Latest release
+
+**Current version: [`v1.2.3`](https://github.com/spa5k/tafsir_api/releases/tag/v1.2.3)** (2026-11-15)
+
+```text
+https://cdn.jsdelivr.net/gh/spa5k/tafsir_api@v1.2.3/tafsir/editions.json
+```
+
+| Version | Date | Changes |
+| ------- | ---- | ------- |
+| [v1.2.3](https://github.com/spa5k/tafsir_api/releases/tag/v1.2.3) | 2026-11-15 | Fixed Tahrir wa al-Tanwir 24:9 tashkeel. Bayan-ul-Quran: 43 surah-start ayahs that showed the previous surah's commentary are now empty. English Mukhtasar: 5 ayahs are now empty. Asbab al-Nuzul by al-Wahidi imported again from the source. See [Known data issues](#known-data-issues). |
+| [v1.2.2](https://github.com/spa5k/tafsir_api/releases/tag/v1.2.2) | 2026-09-30 | French Mukhtasar QUL update: fixed 79:21 and 10:3. |
+| [v1.2.1](https://github.com/spa5k/tafsir_api/releases/tag/v1.2.1) | 2026-09-25 | Added Tafsir Al-Jami' Al-Wajiz (Arabic). Synced QUL exports, with English Ibn Kathir fixes. |
+| [v1.2.0](https://github.com/spa5k/tafsir_api/releases/tag/v1.2.0) | 2026-09-13 | Fixed Al-Qurtubi 34:54 and 59:19. Restored English Ibn Kathir 1:1–1:7. |
+
+To get these fixes, change the version in your URLs to the current version. See all versions on the [releases page](https://github.com/spa5k/tafsir_api/releases).
+
 ## URL Structure:
 
 - `https://cdn.jsdelivr.net/gh/spa5k/tafsir_api@{apiVersion}/{endpoint}`
 
-> **Versioning** — Pin an exact release tag, for example `@v1.2.1`, in production. Use `@main` for the latest data. You can also use a commit hash as the version.
+> **Versioning** — Pin an exact release tag, for example `@v1.2.3`, in production. Use `@main` for the latest data. You can also use a commit hash as the version.
 >
-> ⚠️ **jsDelivr caching warning** — jsDelivr caches release tags with `cache-control: immutable` for up to one year. This is good for pinned tags such as `@v1.2.1`. But it means a moved major tag such as `@v1` can serve **old cached files** after a release. Purge requests do not fully clear it. On jsDelivr, always pin an exact `vX.Y.Z` tag, or use `@main`. The `@v1` alias works on the other CDNs below, because they resolve tags live.
+> ⚠️ **jsDelivr caching warning** — jsDelivr caches release tags with `cache-control: immutable` for up to one year. This is good for pinned tags such as `@v1.2.3`. But it means a moved major tag such as `@v1` can serve **old cached files** after a release. Purge requests do not fully clear it. On jsDelivr, always pin an exact `vX.Y.Z` tag, or use `@main`. The `@v1` alias works on the other CDNs below, because they resolve tags live.
 
 ### Base URLs -
 
-1. JS Delivr: `https://cdn.jsdelivr.net/gh/spa5k/tafsir_api@v1.2.1/tafsir` — pin an exact tag, see the warning above. Fallback domains: `fastly.jsdelivr.net`, `gcore.jsdelivr.net`
+1. JS Delivr: `https://cdn.jsdelivr.net/gh/spa5k/tafsir_api@v1.2.3/tafsir` — pin an exact tag, see the warning above. Fallback domains: `fastly.jsdelivr.net`, `gcore.jsdelivr.net`
 2. Git Hack: `https://rawcdn.githack.com/spa5k/tafsir_api/main/tafsir` (dev tier: `raw.githack.com`)
 3. Staticaly: `https://cdn.statically.io/gh/spa5k/tafsir_api/main/tafsir`
 4. Github: `https://raw.githubusercontent.com/spa5k/tafsir_api/main/tafsir`
